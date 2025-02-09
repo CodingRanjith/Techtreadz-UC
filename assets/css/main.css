@@ -595,6 +595,54 @@ h6 {
       content: "/"; 
     }
 
+ /*--------------------------------------------------------------
+# Details Section
+--------------------------------------------------------------*/
+.details .features-item {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.details .features-item+.features-item {
+  margin-top: 100px;
+}
+
+@media (max-width: 640px) {
+  .details .features-item+.features-item {
+    margin-top: 40px;
+  }
+}
+
+.details .features-item h3 {
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.details .features-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.details .features-item ul li {
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.details .features-item ul li:last-child {
+  padding-bottom: 0;
+}
+
+.details .features-item ul i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: var(--accent-color);
+}
+
+.details .features-item p:last-child {
+  margin-bottom: 0;
+}
+   
+
 
 /*--------------------------------------------------------------
 # About Section

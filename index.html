@@ -78,7 +78,7 @@
             <h2 data-aos="fade-up" data-aos-delay="100">Empower Your IT Career with Techtrendz SRL</h2>
             <p data-aos="fade-up" data-aos-delay="200">Join a leading IT consultancy that bridges top-tier talent with cutting-edge companies in Belgium</p>
             <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
-              <a href="#about" class="btn-get-started">Submit Resume</a>
+              <button type="button" class="btn-get-started" data-bs-toggle="modal" data-bs-target="#resumeModal">Submit Resume</button>
               <a href="https://youtu.be/NlIgN7fYYqU?si=HXnTgdGREBStDXip" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Company Overview</span></a>
             </div>
           </div>
@@ -87,6 +87,128 @@
     </section>
     
     <!-- /Hero Section -->
+
+
+<!-- Resume Submission Modal -->
+<div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="resumeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="border-radius: 10px; background: #32406B; color: white;">
+          <div class="modal-header border-bottom" style="border-color: #1F58AE;">
+              <h5 class="modal-title" id="resumeModalLabel">Submit Your Resume</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form>
+                  <div class="mb-3">
+                      <label for="name" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="name" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="phone" class="form-label">Phone</label>
+                      <input type="tel" class="form-control" id="phone" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="resume" class="form-label">Upload Resume</label>
+                      <input type="file" class="form-control" id="resume" required>
+                  </div>
+                  <button type="submit" class="btn w-100 btn-submit" style="background-color: #C9022C; border: none;">Submit</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<style>
+ /* Modal Content Styling */
+.modal-content {
+    background: linear-gradient(135deg, #32406B 0%, #1F58AE 100%); /* Gradient background */
+    color: white;
+    border-radius: 10px;
+    border: 1px solid #1F58AE;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    overflow: hidden; /* Ensures no internal content overflows */
+}
+
+/* Modal Header Styling */
+.modal-header {
+    padding: 20px;
+    color: #fff;
+    font-weight: bold;
+    border-bottom: 1px solid #1F58AE;
+    background: rgba(0, 0, 0, 0.1); /* Slightly darker overlay on header */
+}
+
+.modal-title {
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Close Button Styling */
+.btn-close-white {
+    filter: invert(1);
+    transition: transform 0.3s ease-in-out; /* Smooth transform on hover */
+}
+
+.btn-close:hover {
+    transform: scale(1.1); /* Scale up the close button on hover */
+}
+
+/* Input Fields Styling */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="file"] {
+    background-color: rgba(255, 255, 255, 0.1); /* Translucent input fields */
+    border: 1px solid #1F58AE;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px; /* Rounded borders for inputs */
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="file"]:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 8px #1F58AE; /* Glowing effect on focus */
+}
+
+/* Submit Button Styling */
+.btn-submit {
+    background-color: #C9022C;
+    border-color: #C9022C;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Spacing between letters */
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(201, 2, 44, 0.4); /* Subtle shadow for button */
+}
+
+.btn-submit:hover {
+    background-color: #A8022A; /* Darker shade on hover */
+    cursor: pointer;
+}
+
+/* Styling for Labels */
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+</style>
+
 
         <!-- About Section -->
         <section id="about" class="about section">
@@ -616,8 +738,6 @@
         </div>
       </div>
     </section>
-    
-    
     <!-- /Faq Section -->
 <!--
      Team Section 
