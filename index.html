@@ -89,39 +89,6 @@
     <!-- /Hero Section -->
 
 
-<!-- Resume Submission Modal -->
-<div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="resumeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content" style="border-radius: 10px; background: #32406B; color: white;">
-          <div class="modal-header border-bottom" style="border-color: #1F58AE;">
-              <h5 class="modal-title" id="resumeModalLabel">Submit Your Resume</h5>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-              <form>
-                  <div class="mb-3">
-                      <label for="name" class="form-label">Name</label>
-                      <input type="text" class="form-control" id="name" required>
-                  </div>
-                  <div class="mb-3">
-                      <label for="email" class="form-label">Email</label>
-                      <input type="email" class="form-control" id="email" required>
-                  </div>
-                  <div class="mb-3">
-                      <label for="phone" class="form-label">Phone</label>
-                      <input type="tel" class="form-control" id="phone" required>
-                  </div>
-                  <div class="mb-3">
-                      <label for="resume" class="form-label">Upload Resume</label>
-                      <input type="file" class="form-control" id="resume" required>
-                  </div>
-                  <button type="submit" class="btn w-100 btn-submit" style="background-color: #C9022C; border: none;">Submit</button>
-              </form>
-          </div>
-      </div>
-  </div>
-</div>
-
 
 <style>
  /* Modal Content Styling */
@@ -208,6 +175,39 @@ label {
 }
 
 </style>
+
+<!-- Resume Submission Modal -->
+<div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="resumeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="border-radius: 10px; background: #32406B; color: white;">
+          <div class="modal-header border-bottom" style="border-color: #1F58AE;">
+              <h5 class="modal-title" id="resumeModalLabel">Submit Your Resume</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form id="resumeForm">
+                  <div class="mb-3">
+                      <label for="name" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="name" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="phone" class="form-label">Phone</label>
+                      <input type="tel" class="form-control" id="phone" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="resume" class="form-label">Upload Resume</label>
+                      <input type="file" class="form-control" id="resume" required>
+                  </div>
+                  <button type="submit" class="btn w-100 btn-submit" style="background-color: #C9022C; border: none;">Submit</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
 
 
         <!-- About Section -->
@@ -985,6 +985,25 @@ label {
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/server.js"></script>
+
+  <script>
+   document.addEventListener("DOMContentLoaded", function () {
+    emailjs.init("ZWPua-ttuCnusXlZ1"); // Replace with your EmailJS Public Key
+});
+
+  </script>
+
+
+  <!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<!-- SweetAlert -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- Include Cloudinary SDK (Optional) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.11.4/cloudinary-core-shrinkwrap.min.js"></script>
+
 
 </body>
 
