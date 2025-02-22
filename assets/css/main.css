@@ -1685,7 +1685,7 @@ section,
 }
 
 .hero .btn-get-started {
-  font-weight: 400;
+  font-weight: bold;
   font-size: 15px;
   letter-spacing: 1px;
   display: inline-block;
@@ -1698,6 +1698,22 @@ section,
 
 .hero .btn-get-started:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+.hero .btn-get-started-job {
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 4px;
+  transition: 0.3s;
+  background: var(--nav-color);
+  color: var(--contrast-color);
+}
+
+.hero .btn-get-started-job:hover {
+  background: color-mix(in srgb, var(--nav-color), transparent 20%);
 }
 
 .hero .btn-watch-video {
